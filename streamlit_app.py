@@ -20,9 +20,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_
 # Model training
 model = lgb.LGBMClassifier(learning_rate=0.09, max_depth=-5, random_state=42)
 
-model.fit(x_train,y_train,eval_set=[(x_test,y_test),(x_train,y_train)],
+model.fit(X_train, y_train, eval_set=[(X_test, y_test),(X_train, y_train)],
           verbose=20,eval_metric='logloss')
 
 # Model performance
-st.write('Train: {:.3f}'.format(model.score(x_train,y_train)))
-st.write('Test: {:.3f}'.format(model.score(x_test,y_test)))
+st.write('Train: {:.3f}'.format(model.score(X_train,y_train)))
+st.write('Test: {:.3f}'.format(model.score(X_test,y_test)))
