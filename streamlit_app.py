@@ -27,5 +27,5 @@ model.fit(X_train, y_train)
 y_train_pred = model.predict(X_train)
 y_test_pred = model.predict(X_test)
 
-st.write('Train R^2: {:.3f}'.format(r2_score(y_train, y_train_pred)))
-st.write('Test R^2: {:.3f}'.format(r2_score(y_test, y_test_pred)))
+st.write('Train $R^2$: {:.3f}'.format(r2_score(y_train, y_train_pred)))
+st.write('Test $R^2$: {:.3f}'.format(r2_score(y_test, y_test_pred)))
