@@ -18,7 +18,7 @@ y = df.iloc[:,-1]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
 
 # Model training
-model = lgb.LGBMRegressor(learning_rate=0.09, max_depth=-5, random_state=42)
+model = lgb.LGBMRegressor(learning_rate=0.09, max_depth=-5, random_state=42, force_col_wise=True)
 
 model.fit(X_train, y_train, force_col_wise=true)
 
