@@ -15,7 +15,7 @@ X = df.iloc[:,:-1]
 y = df.iloc[:,-1]
 
 # Data split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=(0.8, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
 
 # Model training
 model = lgb.LGBMClassifier(learning_rate=0.09, max_depth=-5, random_state=42)
