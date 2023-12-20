@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import lightgbm as lgb
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score
 from sklearn import metrics
 
 st.title('🎈 LightGBM')
@@ -23,5 +24,5 @@ model = lgb.LGBMRegressor(learning_rate=0.09, max_depth=-5, random_state=42, for
 model.fit(X_train, y_train)
 
 # Model performance
-st.write('Train: {:.3f}'.format(model.score(X_train,y_train)))
-st.write('Test: {:.3f}'.format(model.score(X_test,y_test)))
+st.write('Train: {:.3f}'.format(r2_score(X_train,y_train)))
+st.write('Test: {:.3f}'.format(r2_score(X_test,y_test)))
